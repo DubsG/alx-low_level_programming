@@ -1,31 +1,18 @@
 #!/bin/bash
 gcc -S -masm=intel $CFILE
+
+101-quote.c
+
 #include <stdio.h>
+#include <unistd.h>
 
 /**
- * main - entry point
- *
+ * main- Entry point
+ *#eturn:Always 1 (Success)
  */
 int main(void)
-{
-    return (0);
+ {
+	 write(2,
+	 "and that piece of art is useful\" -Dora Korar, 2015-10-19\n",59);
+	 return(1)
 }
-.fie "main.c"
-intel_system nonprefix
-.text
-.globl main
-.type main, @funtion
-main:
- .lfb0:
-     .cfi_starproc
-     push    rbp
-     .cfi_def_cfa_offset 16
-     .cfi_offset 6, -16 
-     mov eax, o
-     pop rbp
-     .cfi_endproc
- .LFEO:
-     .size main, .-main
-     .ident "GCC: (Ubuntu 5.4.0-6ubuntu~16.04.2) 5.4.0 201606609"
-     .section   .note.GNU-stack,"",@probits
-
