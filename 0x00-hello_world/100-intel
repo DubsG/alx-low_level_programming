@@ -1,0 +1,31 @@
+#!/bin/bash
+gcc -S -masm=intel $CFILE
+#include <stdio.h>
+
+/**
+ * main - entry point
+ *
+ */
+int main(void)
+{
+    return (0);
+}
+.fie "main.c"
+intel_system nonprefix
+.text
+.globl main
+.type main, @funtion
+main:
+ .lfb0:
+     .cfi_starproc
+     push    rbp
+     .cfi_def_cfa_offset 16
+     .cfi_offset 6, -16 
+     mov eax, o
+     pop rbp
+     .cfi_endproc
+ .LFEO:
+     .size main, .-main
+     .ident "GCC: (Ubuntu 5.4.0-6ubuntu~16.04.2) 5.4.0 201606609"
+     .section   .note.GNU-stack,"",@probits
+
