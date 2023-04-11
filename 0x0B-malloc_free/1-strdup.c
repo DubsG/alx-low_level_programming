@@ -3,7 +3,7 @@
 #include <stdlib.h>
 /**
  *_strdup - the duplicated memory location
- *@str: char 
+ *@str: char
  * Return: On success returns a pointer to the duplicated string
  * On error: returns NULL if the memory is insufficient
  */
